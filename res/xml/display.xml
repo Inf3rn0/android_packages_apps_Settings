@@ -19,6 +19,12 @@
     android:title="@string/display_and_lights"
     settings:keywords="@string/keywords_display">
 
+    <!-- Smart cover -->
+    <PreferenceScreen
+        android:key="smart_cover"
+        android:title="@string/smart_cover_title"
+        android:fragment="com.android.settings.temasek.SmartCoverSettings" />
+
     <PreferenceCategory
         android:key="display"
         android:title="@string/display_label">
