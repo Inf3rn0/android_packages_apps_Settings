@@ -199,7 +199,7 @@
     <string name="select_custom_activity_title">Select custom activity</string>
     <string name="profile_applist_title">Applications</string>
 
-    <string name="screen_and_animations_title">Animation control</string>
+    <string name="screen_and_animations_title">Screen and animations</string>
 
     <!-- Toast animations -->
     <string name="toast_animation_title">Toast animations</string>
