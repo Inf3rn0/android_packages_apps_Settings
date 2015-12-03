@@ -131,14 +131,6 @@
                 android:fragment="com.android.settings.cyanogenmod.animation.AnimationSettings"
                 android:title="@string/screen_and_animations_title"/>
 
-        <!-- RAM Memory bar -->
-        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-                android:key="systemui_recents_mem_display"
-                android:title="@string/recents_show_membar_title"
-                android:summaryOn="@string/recents_show_membar_summary_on"
-                android:summaryOff="@string/recents_show_membar_summary_off"
-                android:defaultValue="false" />
-
         <!-- wallpaper -->
         <PreferenceScreen
                 android:key="wallpaper"

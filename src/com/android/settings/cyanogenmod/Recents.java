@@ -79,6 +79,12 @@ public class Recents extends SettingsPreferenceFragment implements
     }
 
     @Override
+    protected int getMetricsCategory() {
+        // todo add a constant in MetricsLogger.java
+        return MetricsLogger.MAIN_SETTINGS;
+    }
+
+    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mRecentsClearAllLocation) {
