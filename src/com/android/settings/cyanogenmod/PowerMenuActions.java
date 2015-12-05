@@ -54,6 +54,7 @@ public class PowerMenuActions extends SettingsPreferenceFragment {
     private CheckBoxPreference mScreenshotPref;
     private CheckBoxPreference mOnTheGoPref;
     private SlimSeekBarPreference mOnTheGoAlphaPref;
+    private CheckBoxPreference mScreenrecordPref;
     private CheckBoxPreference mProfilePref;
     private CheckBoxPreference mAirplanePref;
     private CheckBoxPreference mUsersPref;
@@ -96,6 +97,8 @@ public class PowerMenuActions extends SettingsPreferenceFragment {
                 mScreenshotPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_SCREENSHOT);
             } else if (action.equals(GLOBAL_ACTION_KEY_ONTHEGO)) {
                 mOnTheGoPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_ONTHEGO);
+            } else if (action.equals(GLOBAL_ACTION_KEY_SCREENRECORD)) {
+                mScreenrecordPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_SCREENRECORD);
             } else if (action.equals(GLOBAL_ACTION_KEY_AIRPLANE)) {
                 mAirplanePref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_AIRPLANE);
             } else if (action.equals(GLOBAL_ACTION_KEY_USERS)) {
@@ -142,6 +145,9 @@ public class PowerMenuActions extends SettingsPreferenceFragment {
 
         if (mOnTheGoPref != null) {
             mOnTheGoPref.setChecked(settingsArrayContains(GLOBAL_ACTION_KEY_ONTHEGO));
+
+        if (mScreenrecordPref != null) {
+            mScreenrecordPref.setChecked(settingsArrayContains(GLOBAL_ACTION_KEY_SCREENRECORD));
         }
 
         if (mAirplanePref != null) {
@@ -209,6 +215,10 @@ public class PowerMenuActions extends SettingsPreferenceFragment {
         } else if (preference == mOnTheGoPref) {
             value = mOnTheGoPref.isChecked();
             updateUserConfig(value, GLOBAL_ACTION_KEY_ONTHEGO);
+
+        } else if (preference == mScreenrecordPref) {
+            value = mScreenrecordPref.isChecked();
+            updateUserConfig(value, GLOBAL_ACTION_KEY_SCREENRECORD);
 
         } else if (preference == mAirplanePref) {
             value = mAirplanePref.isChecked();
