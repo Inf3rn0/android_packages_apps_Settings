@@ -126,9 +126,9 @@
                 android:title="@string/category_interface">
 
         <!-- Screen and animations -->
-        <PreferenceScreen
-                android:key="screen_and_animations"
-                android:fragment="com.android.settings.crdroid.ScreenAndAnimations"
+	<PreferenceScreen
+                android:key="animation_settings"
+                android:fragment="com.android.settings.cyanogenmod.animation.AnimationSettings"
                 android:title="@string/screen_and_animations_title"/>
 
         <!-- wallpaper -->
