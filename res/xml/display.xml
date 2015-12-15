@@ -126,6 +126,22 @@
             android:title="@string/category_interface">
 
         <PreferenceScreen
+             android:key="pa_pie_control"
+             android:fragment="com.android.settings.paranoid.PieControl"
+             android:title="@string/pa_pie_control_title"/>
+
+    	<PreferenceScreen
+        	android:key="app_circle_bar"
+        	android:fragment="com.android.settings.cyanogenmod.AppCircleBar"
+        	android:title="@string/app_circle_bar_title"/>
+
+	<!-- Gesture anywhere -->
+	<PreferenceScreen
+        	android:key="gesture_anywhere"
+        	android:fragment="com.android.settings.cyanogenmod.gestureanywhere.GestureAnywhereSettings"
+        	android:title="@string/gesture_anywhere_title" />
+
+        <PreferenceScreen
                 android:key="animation_settings"
                 android:fragment="com.android.settings.cyanogenmod.animation.AnimationSettings"
                 android:title="@string/screen_and_animations_title"/>
