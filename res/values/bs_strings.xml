@@ -217,4 +217,7 @@
     <string name="listview_overshoot_interpolator">Overshoot</string>
     <string name="listview_anticipate_overshoot_interpolator">Anticipate and overshoot</string>
     <string name="listview_bounce_interpolator">Bounce</string>
+
+    <!--Kernel Adiutor-->
+    <string name="kernel_adiutor_settings_title">Kernel Adiutor</string>
 </resources>
