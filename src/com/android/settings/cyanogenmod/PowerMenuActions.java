@@ -47,7 +47,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PowerMenuActions extends SettingsPreferenceFragment
-	implements OnPreferenceChangeListener {
+        implements OnPreferenceChangeListener {
 
     final static String TAG = "PowerMenuActions";
 
@@ -68,6 +68,7 @@ public class PowerMenuActions extends SettingsPreferenceFragment
     private CheckBoxPreference mSilentPref;
     private CheckBoxPreference mVoiceAssistPref;
     private CheckBoxPreference mAssistPref;
+
 
     Context mContext;
     private ArrayList<String> mLocalUserConfig = new ArrayList<String>();
@@ -300,6 +301,18 @@ public class PowerMenuActions extends SettingsPreferenceFragment
         }
         return true;
     }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mScreenshotDelay) {
+            int value = Integer.parseInt(newValue.toString());
+            Settings.System.putInt(mCr, Settings.System.SCREENSHOT_DELAY,
+                    value);
+            return true;
+        }
+        return false;
+    }
+
 
     private boolean settingsArrayContains(String preference) {
         return mLocalUserConfig.contains(preference);
