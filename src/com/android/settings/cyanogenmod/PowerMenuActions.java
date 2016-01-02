@@ -52,6 +52,9 @@ public class PowerMenuActions extends SettingsPreferenceFragment
 
     final static String TAG = "PowerMenuActions";
 
+    private static final String SCREENSHOT_DELAY = "screenshot_delay";
+    private static final String PREF_ON_THE_GO_ALPHA = "on_the_go_alpha";
+
     private CheckBoxPreference mRebootPref;
     private CheckBoxPreference mScreenshotPref;
     private CheckBoxPreference mScreenrecordPref;
@@ -66,9 +69,6 @@ public class PowerMenuActions extends SettingsPreferenceFragment
     private SlimSeekBarPreference mOnTheGoAlphaPref;
     private CheckBoxPreference mVoiceAssistPref;
     private CheckBoxPreference mAssistPref;
-
-    private static final String SCREENSHOT_DELAY = "screenshot_delay";
-    private static final String PREF_ON_THE_GO_ALPHA = "on_the_go_alpha";
 
     Context mContext;
     private ArrayList<String> mLocalUserConfig = new ArrayList<String>();
