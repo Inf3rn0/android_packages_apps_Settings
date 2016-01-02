@@ -52,9 +52,6 @@ public class PowerMenuActions extends SettingsPreferenceFragment
 
     final static String TAG = "PowerMenuActions";
 
-    private static final String SCREENSHOT_DELAY = "screenshot_delay";
-    private static final String PREF_ON_THE_GO_ALPHA = "on_the_go_alpha";
-
     private CheckBoxPreference mRebootPref;
     private CheckBoxPreference mScreenshotPref;
     private CheckBoxPreference mScreenrecordPref;
@@ -84,6 +81,8 @@ public class PowerMenuActions extends SettingsPreferenceFragment
     private static final int MIN_DELAY_VALUE = 1;
     private static final int MAX_DELAY_VALUE = 30;
 
+    private static final String SCREENSHOT_DELAY = "screenshot_delay";
+    private static final String PREF_ON_THE_GO_ALPHA = "on_the_go_alpha";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
