@@ -175,7 +175,6 @@ public class PowerMenuActions extends SettingsPreferenceFragment
             mOnTheGoPref.setChecked(settingsArrayContains(GLOBAL_ACTION_KEY_ONTHEGO));
         }
 
-
         if (mAirplanePref != null) {
             mAirplanePref.setChecked(settingsArrayContains(GLOBAL_ACTION_KEY_AIRPLANE));
         }
@@ -229,7 +228,7 @@ public class PowerMenuActions extends SettingsPreferenceFragment
             return true;
         } else if (preference == mOnTheGoAlphaPref) {
             float val = Float.parseFloat((String) newValue);
-            Settings.System.putFloat(mCr, Settings.System.ON_THE_GO_ALPHA, 
+            Settings.System.putFloat(mCr, Settings.System.ON_THE_GO_ALPHA,
                     val / 100);
             return true;
         }
