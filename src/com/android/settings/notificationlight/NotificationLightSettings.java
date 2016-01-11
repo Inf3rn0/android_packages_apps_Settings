@@ -1,3 +1,4 @@
+
 /*
  * Copyright (C) 2012 The CyanogenMod Project
  *
@@ -57,6 +58,7 @@ import java.util.Map;
 
 import cyanogenmod.providers.CMSettings;
 import cyanogenmod.util.ColorUtils;
+import org.cyanogenmod.internal.logging.CMMetricsLogger;
 
 public class NotificationLightSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, AdapterView.OnItemLongClickListener {

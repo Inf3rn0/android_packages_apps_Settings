@@ -39,6 +39,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.util.cm.PowerMenuConstants;
 import cyanogenmod.providers.CMSettings;
 import org.cyanogenmod.internal.logging.CMMetricsLogger;
+
 import static com.android.internal.util.cm.PowerMenuConstants.*;
 import com.android.settings.widget.NumberPickerPreference;
 
@@ -151,7 +152,7 @@ public class PowerMenuActions extends SettingsPreferenceFragment
 
     @Override
     protected int getMetricsCategory() {
-        return CMMetricsLogger.DONT_TRACK_ME_BRO;
+        return CMMetricsLogger.POWER_MENU_ACTIONS;
     }
 
     @Override
