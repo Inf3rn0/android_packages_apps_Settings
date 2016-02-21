@@ -26,9 +26,9 @@ import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.preference.CheckBoxPreference;
-import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
+import android.preference.ListPreference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.SlimSeekBarPreference;
 import android.provider.Settings;
@@ -37,7 +37,6 @@ import com.android.internal.logging.MetricsLogger;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.util.cm.PowerMenuConstants;
-
 import cyanogenmod.providers.CMSettings;
 
 import org.cyanogenmod.internal.logging.CMMetricsLogger;
@@ -71,7 +70,6 @@ public class PowerMenuActions extends SettingsPreferenceFragment
 
     private static final String SCREENSHOT_DELAY = "screenshot_delay";
     private static final String PREF_ON_THE_GO_ALPHA = "on_the_go_alpha";
-
 
     Context mContext;
     private ArrayList<String> mLocalUserConfig = new ArrayList<String>();
