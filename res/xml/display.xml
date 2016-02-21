@@ -125,16 +125,6 @@
             android:key="interface"
             android:title="@string/category_interface">
 
-        <PreferenceScreen
-             android:key="pa_pie_control"
-             android:fragment="com.android.settings.paranoid.PieControl"
-             android:title="@string/pa_pie_control_title"/>
-
-    	<PreferenceScreen
-        	android:key="app_circle_bar"
-        	android:fragment="com.android.settings.cyanogenmod.AppCircleBar"
-        	android:title="@string/app_circle_bar_title"/>
-
         <!-- wallpaper -->
         <PreferenceScreen
                 android:key="wallpaper"
