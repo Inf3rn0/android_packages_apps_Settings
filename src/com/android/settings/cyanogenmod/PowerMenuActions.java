@@ -17,6 +17,7 @@
 package com.android.settings.cyanogenmod;
 
 import android.content.Context;
+import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.pm.UserInfo;
 import android.content.res.Resources;
@@ -36,17 +37,21 @@ import com.android.internal.logging.MetricsLogger;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.util.cm.PowerMenuConstants;
+
 import cyanogenmod.providers.CMSettings;
 
 import org.cyanogenmod.internal.logging.CMMetricsLogger;
 
 import static com.android.internal.util.cm.PowerMenuConstants.*;
+import com.android.settings.widget.NumberPickerPreference;
 
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PowerMenuActions extends SettingsPreferenceFragment {
+public class PowerMenuActions extends SettingsPreferenceFragment
+	implements OnPreferenceChangeListener {
+
     final static String TAG = "PowerMenuActions";
 
     private CheckBoxPreference mRebootPref;
@@ -64,13 +69,21 @@ public class PowerMenuActions extends SettingsPreferenceFragment {
     private CheckBoxPreference mVoiceAssistPref;
     private CheckBoxPreference mAssistPref;
 
-    private static final String SCREENSHOT_DELAY = "screenshot_delay";
-    private static final String PREF_ON_THE_GO_ALPHA = "on_the_go_alpha";
-
     Context mContext;
     private ArrayList<String> mLocalUserConfig = new ArrayList<String>();
     private String[] mAvailableActions;
     private String[] mAllActions;
+
+    private NumberPickerPreference mScreenshotDelay;
+
+    private ContentResolver mCr;
+    private PreferenceScreen mPrefSet;
+
+    private static final int MIN_DELAY_VALUE = 1;
+    private static final int MAX_DELAY_VALUE = 30;
+
+    private static final String SCREENSHOT_DELAY = "screenshot_delay";
+    private static final String PREF_ON_THE_GO_ALPHA = "on_the_go_alpha";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
