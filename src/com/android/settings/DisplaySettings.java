@@ -252,8 +252,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             }
         }
 
-        meDozePreference = (SwitchPreference) 
-findPreference(KEY_DOZE);
+        mDozePreference = (SwitchPreference) findPreference(KEY_DOZE);
         if (mDozePreference != null && Utils.isDozeAvailable(activity)) {
             mDozePreference.setOnPreferenceChangeListener(this);
         } else {
@@ -713,8 +712,7 @@ findPreference(KEY_DOZE);
         }
         if (preference == mCameraGesturePreference) {
             boolean value = (Boolean) objValue;
-            Settings.Secure.putInt(getContentResolver(), CAMERA_GESTURE_DISABLED,
-                    value ? 0 : 1 /* Backwards because setting is for disabling */);
+            Settings.Secure.putInt(getContentResolver(), CAMERA_GESTURE_DISABLED, value ? 0 : 1); /* Backwards because setting is for disabling */
         }
         if (preference == mCameraDoubleTapPowerGesturePreference) {
             boolean value = (Boolean) objValue;

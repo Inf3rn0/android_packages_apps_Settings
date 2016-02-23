@@ -37,10 +37,7 @@ import com.android.internal.logging.MetricsLogger;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.util.cm.PowerMenuConstants;
-
 import cyanogenmod.providers.CMSettings;
-
-import org.cyanogenmod.internal.logging.CMMetricsLogger;
 
 import static com.android.internal.util.cm.PowerMenuConstants.*;
 import com.android.settings.widget.NumberPickerPreference;
@@ -85,8 +82,7 @@ public class PowerMenuActions extends SettingsPreferenceFragment
     private static final int MIN_DELAY_VALUE = 1;
     private static final int MAX_DELAY_VALUE = 30;
 
-    private static final String SCREENSHOT_DELAY = "screenshot_delay";
-    private static final String PREF_ON_THE_GO_ALPHA = "on_the_go_alpha";
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -94,6 +90,12 @@ public class PowerMenuActions extends SettingsPreferenceFragment
 
         addPreferencesFromResource(R.xml.power_menu_settings);
         mContext = getActivity().getApplicationContext();
+
+        mPrefSet = getPreferenceScreen();
+
+        mCr = getActivity().getContentResolver();
+
+
 
         mAvailableActions = getActivity().getResources().getStringArray(
                 R.array.power_menu_actions_array);
@@ -110,8 +112,6 @@ public class PowerMenuActions extends SettingsPreferenceFragment
                 mRebootPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_REBOOT);
             } else if (action.equals(GLOBAL_ACTION_KEY_SCREENSHOT)) {
                 mScreenshotPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_SCREENSHOT);
-            } else if (action.equals(GLOBAL_ACTION_KEY_ONTHEGO)) {
-                mOnTheGoPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_ONTHEGO);
             } else if (action.equals(GLOBAL_ACTION_KEY_SCREENRECORD)) {
                 mScreenrecordPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_SCREENRECORD);
 	    } else if (action.equals(GLOBAL_ACTION_KEY_ONTHEGO)) {
@@ -134,6 +134,14 @@ public class PowerMenuActions extends SettingsPreferenceFragment
                 mSilentPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_ASSIST);
             }
         }
+        mScreenshotDelay = (NumberPickerPreference) mPrefSet.findPreference(
+                SCREENSHOT_DELAY);
+        mScreenshotDelay.setOnPreferenceChangeListener(this);
+        mScreenshotDelay.setMinValue(MIN_DELAY_VALUE);
+        mScreenshotDelay.setMaxValue(MAX_DELAY_VALUE);
+        int ssDelay = Settings.System.getInt(mCr,
+                Settings.System.SCREENSHOT_DELAY, 1);
+        mScreenshotDelay.setCurrentValue(ssDelay);
 
         mOnTheGoAlphaPref = (SlimSeekBarPreference) findPreference(PREF_ON_THE_GO_ALPHA);
         mOnTheGoAlphaPref.setDefault(50);
@@ -145,7 +153,7 @@ public class PowerMenuActions extends SettingsPreferenceFragment
 
     @Override
     protected int getMetricsCategory() {
-        return CMMetricsLogger.POWER_MENU_ACTIONS;
+        return CMMetricsLogger.DONT_TRACK_ME_BRO;
     }
 
     @Override
@@ -160,17 +168,14 @@ public class PowerMenuActions extends SettingsPreferenceFragment
             mScreenshotPref.setChecked(settingsArrayContains(GLOBAL_ACTION_KEY_SCREENSHOT));
         }
 
-        if (mOnTheGoPref != null) {
-            mOnTheGoPref.setChecked(settingsArrayContains(GLOBAL_ACTION_KEY_ONTHEGO));
-
         if (mScreenrecordPref != null) {
             mScreenrecordPref.setChecked(settingsArrayContains(GLOBAL_ACTION_KEY_SCREENRECORD));
         }
 
-
         if (mOnTheGoPref != null) {
             mOnTheGoPref.setChecked(settingsArrayContains(GLOBAL_ACTION_KEY_ONTHEGO));
         }
+
 
         if (mAirplanePref != null) {
             mAirplanePref.setChecked(settingsArrayContains(GLOBAL_ACTION_KEY_AIRPLANE));
@@ -179,7 +184,6 @@ public class PowerMenuActions extends SettingsPreferenceFragment
         if (mUsersPref != null) {
             if (!UserHandle.MU_ENABLED || !UserManager.supportsMultipleUsers()) {
                 getPreferenceScreen().removePreference(findPreference(GLOBAL_ACTION_KEY_USERS));
-                mUsersPref = null;
             } else {
                 List<UserInfo> users = ((UserManager) mContext.getSystemService(
                         Context.USER_SERVICE)).getUsers();
@@ -219,9 +223,14 @@ public class PowerMenuActions extends SettingsPreferenceFragment
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mOnTheGoAlphaPref) {
+        if (preference == mScreenshotDelay) {
+            int value = Integer.parseInt(newValue.toString());
+            Settings.System.putInt(mCr, Settings.System.SCREENSHOT_DELAY,
+                    value);
+            return true;
+        } else if (preference == mOnTheGoAlphaPref) {
             float val = Float.parseFloat((String) newValue);
-            Settings.System.putFloat(mCr, Settings.System.ON_THE_GO_ALPHA,
+            Settings.System.putFloat(mCr, Settings.System.ON_THE_GO_ALPHA, 
                     val / 100);
             return true;
         }
