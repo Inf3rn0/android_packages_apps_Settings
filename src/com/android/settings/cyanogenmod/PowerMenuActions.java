@@ -217,16 +217,9 @@ public class PowerMenuActions extends SettingsPreferenceFragment
     }
 
     @Override
-<<<<<<< HEAD
-=======
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mScreenshotDelay) {
-            int value = Integer.parseInt(newValue.toString());
-            Settings.System.putInt(mCr, Settings.System.SCREENSHOT_DELAY,
-                    value);
-            return true;
-        } else if (preference == mOnTheGoAlphaPref) {
+        if (preference == mOnTheGoAlphaPref) {
             float val = Float.parseFloat((String) newValue);
             Settings.System.putFloat(mCr, Settings.System.ON_THE_GO_ALPHA,
                     val / 100);
@@ -236,7 +229,6 @@ public class PowerMenuActions extends SettingsPreferenceFragment
     }
 
     @Override
->>>>>>> 38fa987... Switch to AICP onthego implementation
     public void onResume() {
         super.onResume();
         updatePreferences();
@@ -253,10 +245,6 @@ public class PowerMenuActions extends SettingsPreferenceFragment
         } else if (preference == mScreenshotPref) {
             value = mScreenshotPref.isChecked();
             updateUserConfig(value, GLOBAL_ACTION_KEY_SCREENSHOT);
-
-        } else if (preference == mOnTheGoPref) {
-            value = mOnTheGoPref.isChecked();
-            updateUserConfig(value, GLOBAL_ACTION_KEY_ONTHEGO);
 
         } else if (preference == mScreenrecordPref) {
             value = mScreenrecordPref.isChecked();
@@ -303,23 +291,6 @@ public class PowerMenuActions extends SettingsPreferenceFragment
         }
         return true;
     }
-
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mScreenshotDelay) {
-            int value = Integer.parseInt(newValue.toString());
-            Settings.System.putInt(mCr, Settings.System.SCREENSHOT_DELAY,
-                    value);
-            return true;
-        } else if (preference == mOnTheGoAlphaPref) {
-            float val = Float.parseFloat((String) newValue);
-            Settings.System.putFloat(mCr, Settings.System.ON_THE_GO_ALPHA,
-                    val / 100);
-            return true;
-        }
-        return false;
-    }
-
 
     private boolean settingsArrayContains(String preference) {
         return mLocalUserConfig.contains(preference);
