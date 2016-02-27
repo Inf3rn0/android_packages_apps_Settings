@@ -270,20 +270,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             }
         }
 
-<<<<<<< HEAD
-=======
-        mCameraDoubleTapPowerGesturePreference =
-                (SwitchPreference) findPreference(KEY_CAMERA_DOUBLE_TAP_POWER_GESTURE);
-        if (mCameraDoubleTapPowerGesturePreference != null &&
-                isCameraDoubleTapPowerGestureAvailable(getResources())) {
-            mCameraDoubleTapPowerGesturePreference.setOnPreferenceChangeListener(this);
-        } else {
-            if (displayPrefs != null && mCameraDoubleTapPowerGesturePreference != null) {
-                displayPrefs.removePreference(mCameraDoubleTapPowerGesturePreference);
-            }
-        }
-
->>>>>>> cfad303... reorg display and move scrolling cache to animation control
         mNightModePreference = (ListPreference) findPreference(KEY_NIGHT_MODE);
         if (mNightModePreference != null) {
             final UiModeManager uiManager = (UiModeManager) getSystemService(
@@ -726,17 +712,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         }
         if (preference == mCameraGesturePreference) {
             boolean value = (Boolean) objValue;
-<<<<<<< HEAD
-            Settings.Secure.putInt(getContentResolver(), CAMERA_GESTURE_DISABLED, value ? 0 : 1); /* Backwards because setting is for disabling */
-=======
             Settings.Secure.putInt(getContentResolver(), CAMERA_GESTURE_DISABLED,
                     value ? 0 : 1 /* Backwards because setting is for disabling */);
-        }
-        if (preference == mCameraDoubleTapPowerGesturePreference) {
-            boolean value = (Boolean) objValue;
-            Settings.Secure.putInt(getContentResolver(), CAMERA_DOUBLE_TAP_POWER_GESTURE_DISABLED,
-                    value ? 0 : 1 /* Backwards because setting is for disabling */);
->>>>>>> cfad303... reorg display and move scrolling cache to animation control
         }
         if (preference == mNightModePreference) {
             try {
