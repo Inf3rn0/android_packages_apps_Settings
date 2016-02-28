@@ -15,18 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Superuser indicator on status bar -->
-    <string name="su_indicator">Superuser indicator</string>
-    <string name="su_indicator_summary_on">Superuser indicator is visible when a session is active</string>
-    <string name="su_indicator_summary_off">Toggle to show superuser indicator when a session is active</string>
-
-    <!-- About device screen, CPU and RAM info. -->
-    <string name="cpu_info">CPU</string>
-    <string name="mem_info">RAM</string>
-
-    <!-- Battery saver color -->
-    <string name="battery_saver_color_title">Warning color</string>
-    <string name="battery_saver_color_summary">Enable orange status and navigation bars when battery saver is activated</string>
 
     <!-- RAM bar -->
     <string name="recents_show_membar_title">RAM memory bar</string>
@@ -40,68 +28,6 @@
     <string name="pref_scrollingcache_default_enable">Default enable</string>
     <string name="pref_scrollingcache_default_disable">Default disable</string>
     <string name="pref_scrollingcache_force_disable">Force disable</string>
-
-    <!-- Force expanded notifications -->
-    <string name="force_expanded_notifications_title">Force Expanded Notifications</string>
-    <string name="force_expanded_notifications_summary">Available only for apps that support expanded notifications</string>
-
-    <!-- Disabling immersive mode messages -->
-    <string name="disable_immersive_message_title">Disable Immersive Mode Messages</string>
-    <string name="disable_immersive_message_summary">This will hide all Immersive Mode Messages</string>
-
-    <!-- Disabling FC notifications -->
-    <string name="disable_fc_notifications_title">Disable FC Notifications</string>
-    <string name="disable_fc_notifications_summary">This will hide all force close notificaitons</string>
-
-    <!--Time Contexual Header -->
-    <string name="status_bar_custom_header_title">Time Contextual Header</string>
-    <string name="status_bar_custom_header_summary">Enable notification panel header image</string>
-    <string name="status_bar_custom_header_default_title">Use Poly HD images</string>
-    <string name="status_bar_custom_header_default_summary">Enable for Polygraphic HD images. Disable for original images.</string>
-
-    <!-- Battery Bar -->
-    <string name="status_bar_battery_cat_title">Battery</string>
-    <string name="battery_bar_title">Battery Bar</string>
-    <string name="battery_bar">Battery bar location</string>
-    <string name="battery_bar_color">Battery bar color</string>
-    <string name="battery_bar_cat">Battery bar style</string>
-    <string name="battery_bar_style_title">Battery bar alignment</string>
-    <string name="battery_bar_thickness_title">Battery bar thickness</string>
-    <string name="battery_bar_animate_title">Charging animation</string>
-    <string name="battery_bar_animate_summary">The charging animation may result in a poor user experience. Enable at your own discretion.</string>
-
-    <!-- Color Picker -->
-    <string name="dialog_color_picker">Color Picker</string>
-    <string name="press_color_to_apply">Press on color below to apply</string>
-    <string name="arrow_right" translatable="false">→</string>
-    <string name="arrow_down" translatable="false">↓</string>
-    <string name="hex">Hex:</string>
-    <string name="hex_hint">#ff000000</string>
-    <string name="set">Set</string>
-    <string name="color_default">Default</string>
-
-    <!-- NavBar options -->
-    <string name="navbar_enable_bar">Enable</string>
-    <string name="navbardimenfrag_title">Navbar Dimensions</string>
-    <string name="navbar_dimensions_reset_message">Reset all dimensions entries to default?</string>
-    <string name="navigation_bar_height_title">Navigation bar height</string>
-    <string name="navigation_bar_height_landscape_title">Navigation bar height landscape</string>
-    <string name="navigation_bar_width_title">Navigation bar width</string>
-    <string name="navigation_bar_size_42_dp_default">42 dp (default)</string>
-    <string name="navigation_bar_size_36_dp">36 dp</string>
-    <string name="navigation_bar_size_30_dp">30 dp</string>
-    <string name="navigation_bar_size_24_dp">24 dp</string>
-    <string name="navigation_bar_size_52_dp">52 dp</string>
-    <string name="navigation_bar_size_48_dp_default">48 dp (default)</string>
-    <string name="navigation_bar_size_44_dp">44 dp</string>
-    <string name="navigation_bar_size_40_dp">40 dp</string>
-    <string name="navigation_bar_size_42_dp">42 dp</string>
-    <string name="navigation_bar_size_0_dp">0 dp (off)</string>
-
-    <!-- Power menu -->
-    <string name="power_category">Power menu</string>
-    <string name="lockscreen_enable_power_menu_title">Show power menu lock screen</string>
-    <string name="lockscreen_enable_power_menu_summary">This option will only disable the power menu on secure lock screens</string>
 
     <!-- Quick unlock -->
     <string name="unlock_quick_unlock_control_title">Quick unlock</string>
@@ -124,10 +50,6 @@
     <string name="recents_searchbar_summary">Show Google search bar in the recents screen</string>
     <string name="recents_show_fullscreen">Fullscreen Recents</string>
     <string name="recents_fullscreen_summary">Enable immersive mode for recents screen</string>
-
-    <!-- Media art -->
-    <string name="media_art_title">Media cover art</string>
-    <string name="media_art_summary">Enable media cover art on the lockscreen</string>
 
     <!-- Animation controls -->
     <string name="screen_and_animations_title">Animation controls</string>
@@ -162,18 +84,10 @@
     <string name="omniswitch_first_time_title">Information</string>
     <string name="omniswitch_first_time_message">Make sure you have enabled OmniSwitch. You can do this by using \"Settings\" below</string>
 
-    <!-- Double tap to sleep on lockscreen -->
-    <string name="double_tap_sleep_anywhere_title">DT2S on Lockscreen</string>
-    <string name="double_tap_sleep_anywhere_summary">Double tap lockscreen to put the device to sleep</string>
-
-    <string name="system_ui_tuner">System UI Tuner</string>
-
     <!-- Three finger screenshot gesture -->
     <string name="three_finger_gesture">Three finger gesture</string>
     <string name="three_finger_gesture_summary">Swipe three fingers downwards to take a screenshot</string>
 
-    <!-- Hold back to kill timeout -->
-    <string name="hold_back_to_kill_timeout_title">Kill app back button timeout</string>
     <string name="default_string">Default</string>
 
     <!-- AOKP custom system animations -->
@@ -220,4 +134,5 @@
 
     <!--Kernel Adiutor-->
     <string name="kernel_adiutor_settings_title">Kernel Adiutor</string>
+
 </resources>
