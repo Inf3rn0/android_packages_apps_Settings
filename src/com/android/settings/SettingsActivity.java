@@ -293,8 +293,7 @@ public class SettingsActivity extends Activity
             R.id.print_settings,
             R.id.home_settings,
             R.id.dashboard,
-            R.id.privacy_settings_cyanogenmod,
-	    R.id.kernel_adiutor
+            R.id.privacy_settings_cyanogenmod
     };
 
     private static final String[] ENTRY_FRAGMENTS = {
@@ -1315,16 +1314,6 @@ public class SettingsActivity extends Activity
                     boolean hasPrintingSupport = getPackageManager().hasSystemFeature(
                             PackageManager.FEATURE_PRINTING);
                     if (!hasPrintingSupport) {
-                        removeTile = true;
-                    }
-		} else if (id == R.id.kernel_adiutor) {
-                    // Only show kernel_adiutor if its installed
-                    boolean supported = false;
-                    try {
-                        supported = (getPackageManager().getPackageInfo("com.grarak.kerneladiutor", 0).versionCode >= 0);
-                    } catch (PackageManager.NameNotFoundException e) {
-                    }
-                    if (!supported) {
                         removeTile = true;
                     }
                 } else if (id == R.id.development_settings) {
