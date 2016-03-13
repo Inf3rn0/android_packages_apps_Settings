@@ -39,6 +39,8 @@ import java.util.Arrays;
 
 public class AnimationControls extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
+    private static final String ANIMATION_CONTROLS_EXIT_ONLY = "animation_controls_exit_only";
+    private static final String ANIMATION_CONTROLS_REVERSE_EXIT = "animation_controls_reverse_exit";
     private static final String ACTIVITY_OPEN = "activity_open";
     private static final String ACTIVITY_CLOSE = "activity_close";
     private static final String TASK_OPEN = "task_open";
@@ -52,6 +54,8 @@ public class AnimationControls extends SettingsPreferenceFragment implements OnP
     private static final String WALLPAPER_INTRA_OPEN = "wallpaper_intra_open";
     private static final String WALLPAPER_INTRA_CLOSE = "wallpaper_intra_close";
 
+    SwitchPreference mAnimExitOnly;
+    SwitchPreference mAnimReverseExit;
     ListPreference mActivityOpenPref;
     ListPreference mActivityClosePref;
     ListPreference mTaskOpenPref;
@@ -91,9 +95,13 @@ public class AnimationControls extends SettingsPreferenceFragment implements OnP
             mAnimationsNum[i] = String.valueOf(mAnimations[i]);
         }
 
-        //mAnimNoOverride = (SwitchPreference) findPreference(ANIMATION_NO_OVERRIDE);
-        //mAnimNoOverride.setChecked(Settings.System.getBoolean(mContentRes,
-        //        Settings.System.ANIMATION_CONTROLS_NO_OVERRIDE, false));
+        mAnimExitOnly = (SwitchPreference) findPreference(ANIMATION_CONTROLS_EXIT_ONLY);
+        mAnimExitOnly.setChecked(Settings.System.getBoolean(mContentRes,
+                Settings.System.ANIMATION_CONTROLS_EXIT_ONLY, false));
+
+        mAnimReverseExit = (SwitchPreference) findPreference(ANIMATION_CONTROLS_REVERSE_EXIT);
+        mAnimReverseExit.setChecked(Settings.System.getBoolean(mContentRes,
+                Settings.System.ANIMATION_CONTROLS_REVERSE_EXIT, false));
 
         mActivityOpenPref = (ListPreference) findPreference(ACTIVITY_OPEN);
         mActivityOpenPref.setOnPreferenceChangeListener(this);
@@ -160,19 +168,26 @@ public class AnimationControls extends SettingsPreferenceFragment implements OnP
         mAnimationDuration = (AnimBarPreference) findPreference(ANIMATION_DURATION);
         mAnimationDuration.setInitValue((int) (defaultDuration));
         mAnimationDuration.setOnPreferenceChangeListener(this);
+
+        updateRevExitAnim();
     }
 
-    //@Override
-    //public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
-    //                                     Preference preference) {
-    //   if (preference == mAnimNoOverride) {
-    //        Settings.System.putBoolean(mContentRes,
-    //                Settings.System.ANIMATION_CONTROLS_NO_OVERRIDE,
-    //                    mAnimNoOverride.isChecked());
-    //        return true;
-    //    }
-    //    return false;
-    //}
+    @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        if (preference == mAnimExitOnly) {
+            Settings.System.putBoolean(mContentRes,
+                    Settings.System.ANIMATION_CONTROLS_EXIT_ONLY,
+                        mAnimExitOnly.isChecked());
+            updateRevExitAnim();
+            return true;
+        } else if (preference == mAnimReverseExit) {
+            Settings.System.putBoolean(mContentRes,
+                    Settings.System.ANIMATION_CONTROLS_REVERSE_EXIT,
+                        mAnimReverseExit.isChecked());
+            return true;
+        }
+        return false;
+    }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -252,5 +267,12 @@ public class AnimationControls extends SettingsPreferenceFragment implements OnP
 
         int mNum = Settings.System.getInt(mContentRes, mString, 0);
         return mAnimationsStrings[mNum];
+    }
+
+    private void updateRevExitAnim() {
+        boolean enabled = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.ANIMATION_CONTROLS_EXIT_ONLY, 0) == 1;
+
+        mAnimReverseExit.setEnabled(!enabled);
     }
 }
