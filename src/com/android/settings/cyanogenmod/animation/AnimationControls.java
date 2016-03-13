@@ -54,9 +54,6 @@ public class AnimationControls extends SettingsPreferenceFragment implements OnP
     private static final String WALLPAPER_INTRA_OPEN = "wallpaper_intra_open";
     private static final String WALLPAPER_INTRA_CLOSE = "wallpaper_intra_close";
     private static final String TASK_OPEN_BEHIND = "task_open_behind";
-    private static final String ANIMATION_CONTROLS_NO_OVERRIDE = "animation_controls_no_override";
-    private static final String ANIMATION_CONTROLS_EXIT_ONLY = "animation_controls_exit_only";
-    private static final String ANIMATION_CONTROLS_REVERSE_EXIT = "animation_controls_reverse_exit";
 
     SwitchPreference mAnimExitOnly;
     SwitchPreference mAnimReverseExit;
@@ -71,9 +68,6 @@ public class AnimationControls extends SettingsPreferenceFragment implements OnP
     ListPreference mWallpaperIntraOpen;
     ListPreference mWallpaperIntraClose;
     AnimBarPreference mAnimationDuration;
-    SwitchPreference mAnimNoOverride;
-    SwitchPreference mAnimExitOnly;
-    SwitchPreference mAnimReverseOnly;
 
     private int[] mAnimations;
     private String[] mAnimationsStrings;
@@ -188,11 +182,6 @@ public class AnimationControls extends SettingsPreferenceFragment implements OnP
         }
         return false;
 
-        mAnimNoOverride = (SwitchPreference) prefs.findPreference(ANIMATION_CONTROLS_NO_OVERRIDE);
-        mAnimNoOverride.setChecked((Settings.System.getInt(resolver,
-                Settings.System.ANIMATION_CONTROLS_NO_OVERRIDE, 0) == 1));
-        mAnimNoOverride.setOnPreferenceChangeListener(this);
-
         mAnimExitOnly = (SwitchPreference) prefs.findPreference(ANIMATION_CONTROLS_EXIT_ONLY);
         mAnimExitOnly.setChecked((Settings.System.getInt(resolver,
                 Settings.System.ANIMATION_CONTROLS_EXIT_ONLY, 1) == 1));
@@ -252,11 +241,6 @@ public class AnimationControls extends SettingsPreferenceFragment implements OnP
             int val = Integer.parseInt((String) newValue);
             Settings.System.putInt(mContentRes,
                     Settings.System.ANIMATION_CONTROLS_DURATION, val);
-        } else if (preference == mAnimNoOverride) {
-            boolean value = (Boolean) newValue;
-            Settings.System.putInt(resolver, Settings.System.ANIMATION_CONTROLS_NO_OVERRIDE,
-                    value ? 1 : 0);
-            return true;
         } else if (preference == mAnimExitOnly) {
             boolean value = (Boolean) newValue;
             Settings.System.putInt(resolver, Settings.System.ANIMATION_CONTROLS_EXIT_ONLY,
