@@ -158,10 +158,20 @@ public class AnimationControls extends SettingsPreferenceFragment implements OnP
         mWallpaperIntraClose.setEntryValues(mAnimationsNum);
 
         int defaultDuration = Settings.System.getInt(mContentRes,
-                Settings.System.ANIMATION_CONTROLS_DURATION, 25);
+                Settings.System.ANIMATION_CONTROLS_DURATION, 0);
         mAnimationDuration = (AnimBarPreference) findPreference(ANIMATION_DURATION);
         mAnimationDuration.setInitValue((int) (defaultDuration));
         mAnimationDuration.setOnPreferenceChangeListener(this);
+
+        mAnimExitOnly = (SwitchPreference) prefs.findPreference(ANIMATION_CONTROLS_EXIT_ONLY);
+        mAnimExitOnly.setChecked((Settings.System.getInt(resolver,
+                Settings.System.ANIMATION_CONTROLS_EXIT_ONLY, 1) == 1));
+        mAnimExitOnly.setOnPreferenceChangeListener(this);
+
+        mAnimReverseOnly = (SwitchPreference) prefs.findPreference(ANIMATION_CONTROLS_REVERSE_EXIT);
+        mAnimReverseOnly.setChecked((Settings.System.getInt(resolver,
+                Settings.System.ANIMATION_CONTROLS_REVERSE_EXIT, 0) == 1));
+        mAnimReverseOnly.setOnPreferenceChangeListener(this);
 
         updateRevExitAnim();
     }
