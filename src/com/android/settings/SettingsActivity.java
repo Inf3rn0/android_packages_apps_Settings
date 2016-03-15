@@ -294,7 +294,7 @@ public class SettingsActivity extends Activity
             R.id.home_settings,
             R.id.dashboard,
             R.id.privacy_settings_cyanogenmod,
-	    R.id.kernel_adiutor
+	    R.id.kernel_adiutor,
             R.id.button_settings
     };
 
