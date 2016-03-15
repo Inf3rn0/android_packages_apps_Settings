@@ -171,17 +171,6 @@ public class AnimationControls extends SettingsPreferenceFragment implements OnP
     }
 
     @Override
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        if (preference == mAnimExitOnly) {
-            Settings.System.putBoolean(mContentRes,
-                    Settings.System.ANIMATION_CONTROLS_EXIT_ONLY,
-                        mAnimExitOnly.isChecked());
-            updateRevExitAnim();
-            return true;
-        }
-    }
-
-    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
         boolean result = false;
