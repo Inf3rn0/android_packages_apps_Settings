@@ -173,6 +173,18 @@
   <string name="wifi_setting_countrycode_summary">Specifica il codice regione per il Wi\u2011Fi</string>
   <!-- Wi-Fi settings screen, error message when the frequency band could not be set [CHAR LIMIT=50]. -->
   <string name="wifi_setting_countrycode_error">Problema nell\'impostazione del codice regione.</string>
+  <string name="wifi_countrycode_us">Stati Uniti</string>
+  <string name="wifi_countrycode_ca">Canada, Taiwan</string>
+  <string name="wifi_countrycode_de">Germania</string>
+  <string name="wifi_countrycode_gb">Europa</string>
+  <string name="wifi_countrycode_jp">Giappone, Russia</string>
+  <string name="wifi_countrycode_au">Australia</string>
+  <string name="wifi_countrycode_cn">Cina</string>
+  <string name="wifi_countrycode_kr">Corea</string>
+  <string name="wifi_countrycode_tr">Sud Africa, Turchia</string>
+  <string name="wifi_countrycode_sg">Israele, Singapore</string>
+  <string name="wifi_countrycode_br">Brasile</string>
+  <string name="wifi_countrycode_in">India</string>
   <!-- Profiles -->
   <string name="profile_menu_delete_title">Elimina</string>
   <string name="profile_action_none">Lascia invariato</string>
@@ -574,6 +586,9 @@
   <string name="saturation_str">Saturazione: <xliff:g id="saturation_value">%1$s</xliff:g></string>
   <string name="contrast_str">Contrasto: <xliff:g id="contrast_value">%1$s</xliff:g></string>
   <string name="intensity_str">Intensità: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
+  <string name="screen_color_standard">Standard</string>
+  <string name="screen_color_vivid">Vivido</string>
+  <string name="screen_color_custom">Personalizzato</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">Ottimizza lo schermo in base all\'ora del giorno e alle condizioni ambientali per migliorare la leggibilità e ridurre l\'affaticamento degli occhi</string>
   <string name="live_display_mode">Modalità display</string>
@@ -1027,4 +1042,11 @@
   <string name="restrict_cellular_access_dialog_summary">Questa funzione potrebbe impedire ad un\'app di funzionare correttamente quando sei connesso solo con dati mobili.\n\nPotresti trovare controlli per l\'utilizzo dati pià appropriati all\'interno delle impostazioni dell\'app stessa.</string>
   <!-- Label for settings shortcut: carrier selection -->
   <string name="shortcut_carrier_title">Operatori di rete</string>
+  <!-- title for lock screen blur preference -->
+  <string name="lockscreen_blur_enabled_title">Blocco schermo sfuocato</string>
+  <!-- Per app controls for LP keyguard notifications -->
+  <string name="app_notification_show_on_keyguard_title">Mostra nella schermata di blocco</string>
+  <string name="app_notification_show_on_keyguard_summary">Mostra notifiche di quest\'app nella schermata di blocco</string>
+  <string name="app_notification_no_ongoing_on_keyguard_title">Disabilita la notifica persistente nella schermata di blocco</string>
+  <string name="app_notification_no_ongoing_on_keyguard_summary">Non mostrare mai notifiche persistenti da quest\'app nella schermata di blocco</string>
 </resources>

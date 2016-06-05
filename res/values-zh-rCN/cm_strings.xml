@@ -169,6 +169,18 @@
   <string name="wifi_setting_countrycode_summary">为 Wi\u2011Fi 指定区域码</string>
   <!-- Wi-Fi settings screen, error message when the frequency band could not be set [CHAR LIMIT=50]. -->
   <string name="wifi_setting_countrycode_error">设置区域码时遇到了问题。</string>
+  <string name="wifi_countrycode_us">美国</string>
+  <string name="wifi_countrycode_ca">加拿大，台湾</string>
+  <string name="wifi_countrycode_de">德国</string>
+  <string name="wifi_countrycode_gb">欧洲</string>
+  <string name="wifi_countrycode_jp">日本，俄罗斯</string>
+  <string name="wifi_countrycode_au">澳大利亚</string>
+  <string name="wifi_countrycode_cn">中国</string>
+  <string name="wifi_countrycode_kr">韩国</string>
+  <string name="wifi_countrycode_tr">南非，土耳其</string>
+  <string name="wifi_countrycode_sg">以色列，新加坡</string>
+  <string name="wifi_countrycode_br">巴西</string>
+  <string name="wifi_countrycode_in">印度</string>
   <!-- Profiles -->
   <string name="profile_menu_delete_title">删除</string>
   <string name="profile_action_none">保持不变</string>
@@ -570,6 +582,9 @@
   <string name="saturation_str">饱和度：<xliff:g id="saturation_value">%1$s</xliff:g></string>
   <string name="contrast_str">对比度：<xliff:g id="contrast_value">%1$s</xliff:g></string>
   <string name="intensity_str">强度：<xliff:g id="intensity_str_value">%1$s</xliff:g></string>
+  <string name="screen_color_standard">标准</string>
+  <string name="screen_color_vivid">鲜艳</string>
+  <string name="screen_color_custom">自定义</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">基于时间和环境条件来优化您的屏幕以改善可读性和减少眼睛疲劳</string>
   <string name="live_display_mode">显示模式</string>
@@ -1022,4 +1037,11 @@
   <string name="restrict_cellular_access_dialog_summary">此功能在仅有移动数据网络时可能会导致依赖网络访问的应用停止工作。\n\n您可以在设置中找到对于该应用更加合适的数据使用情况控制。</string>
   <!-- Label for settings shortcut: carrier selection -->
   <string name="shortcut_carrier_title">网络运营商</string>
+  <!-- title for lock screen blur preference -->
+  <string name="lockscreen_blur_enabled_title">锁屏模糊</string>
+  <!-- Per app controls for LP keyguard notifications -->
+  <string name="app_notification_show_on_keyguard_title">在锁屏上显示</string>
+  <string name="app_notification_show_on_keyguard_summary">在锁屏上显示来自此应用的通知</string>
+  <string name="app_notification_no_ongoing_on_keyguard_title">禁用锁屏上的持久通知</string>
+  <string name="app_notification_no_ongoing_on_keyguard_summary">永不在锁屏上显示来自此应用的持久通知</string>
 </resources>

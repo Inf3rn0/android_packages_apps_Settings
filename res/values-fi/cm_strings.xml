@@ -173,6 +173,18 @@
   <string name="wifi_setting_countrycode_summary">Aseta Wi\u2011Fin aluekoodi</string>
   <!-- Wi-Fi settings screen, error message when the frequency band could not be set [CHAR LIMIT=50]. -->
   <string name="wifi_setting_countrycode_error">Ongelma aluekoodia asetettaessa.</string>
+  <string name="wifi_countrycode_us">Yhdysvallat</string>
+  <string name="wifi_countrycode_ca">Kanada, Taiwan</string>
+  <string name="wifi_countrycode_de">Saksa</string>
+  <string name="wifi_countrycode_gb">Eurooppa</string>
+  <string name="wifi_countrycode_jp">Japani, Venäjä</string>
+  <string name="wifi_countrycode_au">Australia</string>
+  <string name="wifi_countrycode_cn">Kiina</string>
+  <string name="wifi_countrycode_kr">Korea</string>
+  <string name="wifi_countrycode_tr">Etelä-Afrikka, Turkki</string>
+  <string name="wifi_countrycode_sg">Israel, Singapore</string>
+  <string name="wifi_countrycode_br">Brasilia</string>
+  <string name="wifi_countrycode_in">Intia</string>
   <!-- Profiles -->
   <string name="profile_menu_delete_title">Poista</string>
   <string name="profile_action_none">Ei muutoksia</string>
@@ -574,6 +586,9 @@
   <string name="saturation_str">Kylläisyys: <xliff:g id="saturation_value">%1$s</xliff:g></string>
   <string name="contrast_str">Kontrasti: <xliff:g id="contrast_value">%1$s</xliff:g></string>
   <string name="intensity_str">Intensiteetti: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
+  <string name="screen_color_standard">Standardi</string>
+  <string name="screen_color_vivid">Eloisa</string>
+  <string name="screen_color_custom">Mukautettu</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">Optimoi näyttösi kellonajan ja ympäristöolosuhteiden perusteella parantaaksesi luettavuutta ja vähentääksesi silmien rasitusta</string>
   <string name="live_display_mode">Näyttötila</string>
@@ -1025,4 +1040,11 @@
   <string name="restrict_cellular_access_dialog_summary">Tämä ominaisuus voi aiheuttaa verkkoyhteydestä riippuvaisen sovelluksen toiminnan lakkaamisen kun vain mobiilidataverkko on käytettävissä.\n\nLöydät lisää tiedonsiirron hallintaominaisuuksia sovelluksesta.</string>
   <!-- Label for settings shortcut: carrier selection -->
   <string name="shortcut_carrier_title">Verkko-operaattorit</string>
+  <!-- title for lock screen blur preference -->
+  <string name="lockscreen_blur_enabled_title">Lukitusnäytön sumennus</string>
+  <!-- Per app controls for LP keyguard notifications -->
+  <string name="app_notification_show_on_keyguard_title">Näytä lukitusnäytöllä</string>
+  <string name="app_notification_show_on_keyguard_summary">Näytä tämän sovelluksen ilmoitukset lukitusnäytöllä</string>
+  <string name="app_notification_no_ongoing_on_keyguard_title">Älä näytä pysyviä ilmoituksia lukitusnäytöllä</string>
+  <string name="app_notification_no_ongoing_on_keyguard_summary">Älä koskaan näytä pysyviä ilmoituksia tästä sovelluksesta lukitusnäytöllä</string>
 </resources>

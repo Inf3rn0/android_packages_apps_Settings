@@ -169,6 +169,18 @@
   <string name="wifi_setting_countrycode_summary">Określ kod regionu Wi\u2011Fi</string>
   <!-- Wi-Fi settings screen, error message when the frequency band could not be set [CHAR LIMIT=50]. -->
   <string name="wifi_setting_countrycode_error">Wystąpił problem podczas ustawiania kodu regionu.</string>
+  <string name="wifi_countrycode_us">Stany Zjednoczone</string>
+  <string name="wifi_countrycode_ca">Kanada, Tajwan</string>
+  <string name="wifi_countrycode_de">Niemcy</string>
+  <string name="wifi_countrycode_gb">Europa</string>
+  <string name="wifi_countrycode_jp">Japonia, Rosja</string>
+  <string name="wifi_countrycode_au">Australia</string>
+  <string name="wifi_countrycode_cn">Chiny</string>
+  <string name="wifi_countrycode_kr">Korea</string>
+  <string name="wifi_countrycode_tr">Republika Południowej Afryki, Turcja</string>
+  <string name="wifi_countrycode_sg">Izrael, Singapur</string>
+  <string name="wifi_countrycode_br">Brazylia</string>
+  <string name="wifi_countrycode_in">Indie</string>
   <!-- Profiles -->
   <string name="profile_menu_delete_title">Usuń</string>
   <string name="profile_action_none">Pozostaw bez zmian</string>
@@ -569,6 +581,9 @@
   <string name="saturation_str">Nasycenie: <xliff:g id="saturation_value">%1$s</xliff:g></string>
   <string name="contrast_str">Kontrast: <xliff:g id="contrast_value">%1$s</xliff:g></string>
   <string name="intensity_str">Intensywność: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
+  <string name="screen_color_standard">Standardowo</string>
+  <string name="screen_color_vivid">Żywy</string>
+  <string name="screen_color_custom">Własna</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">Optymalizuj swój ekran bazując na porze dnia i warunkach panujących w otoczeniu, aby zwiększyć czytelność i zmniejszyć uczucie zmęczenia oczu</string>
   <string name="live_display_mode">Tryb wyświetlania</string>
@@ -677,8 +692,8 @@
   <string name="status_bar_notif_count_summary">Wyświetla licznik oczekujących powiadomień</string>
   <string name="status_bar_quick_qs_pulldown_title">Szybkie rozwijanie</string>
   <string name="status_bar_quick_qs_pulldown_summary">%1$s krawędź ekranu rozwija szybkie ustawienia</string>
-  <string name="status_bar_quick_qs_pulldown_summary_left">Lewa</string>
-  <string name="status_bar_quick_qs_pulldown_summary_right">Prawa</string>
+  <string name="status_bar_quick_qs_pulldown_summary_left">Lewo</string>
+  <string name="status_bar_quick_qs_pulldown_summary_right">Prawo</string>
   <string name="status_bar_quick_qs_pulldown_off">Wyłączony</string>
   <string name="status_bar_quick_qs_pulldown_left">Lewa</string>
   <string name="status_bar_quick_qs_pulldown_right">Prawa</string>
@@ -1009,11 +1024,24 @@
   <string name="allow_background_both">Dane mobilne &amp; Wi\u2011Fi</string>
   <string name="allow_background_wlan">Tylko przez Wi\u2011Fi</string>
   <string name="allow_background_none">Brak dostępu</string>
+  <string name="mobile_data_alert">Alert danych komórkowych</string>
+  <string name="mobile_data_alert_summary">Powiadom, jeśli aplikacja zużywa znaczną ilość danych</string>
+  <string name="data_usage_menu_enable_data_alerts">Włącz alerty użycia danych</string>
+  <string name="data_usage_menu_disable_data_alerts">Wyłącz alerty użycia danych</string>
   <string name="data_usage_menu_reset_stats">Resetuj statystyki danych</string>
   <string name="reset_data_stats_msg">Spowoduje to skasowanie przeszłych i aktualnych informacji o użyciu danych</string>
   <string name="reset_stats_confirm">Potwierdź</string>
   <string name="restrict_cellular_access_title">Ogranicz dostęp do danych mobilnych</string>
+  <string name="restrict_cellular_access_summary">Wyłącz dostęp do danych w sieciach komórkowych</string>
   <string name="restrict_cellular_access_dialog_title">Ograniczyć dostęp do danych mobilnych?</string>
+  <string name="restrict_cellular_access_dialog_summary">Ta funkcja może spowodować, że aplikacje wymagające stałego dostępu do danych mogą przestać działać jeśli będą dostępne tylko sieci komórkowe.\n\nMożesz znaleźć więcej ustawień odnośnie kontroli danych mobilnych w ustawieniach.</string>
   <!-- Label for settings shortcut: carrier selection -->
   <string name="shortcut_carrier_title">Operatorzy sieci</string>
+  <!-- title for lock screen blur preference -->
+  <string name="lockscreen_blur_enabled_title">Rozmycie blokady ekranu</string>
+  <!-- Per app controls for LP keyguard notifications -->
+  <string name="app_notification_show_on_keyguard_title">Pokaż na ekranie blokady</string>
+  <string name="app_notification_show_on_keyguard_summary">Pokaż powiadomienia z tej aplikacji na ekranie blokady</string>
+  <string name="app_notification_no_ongoing_on_keyguard_title">Wyłącz trwałe powiadomienia na ekranie blokady</string>
+  <string name="app_notification_no_ongoing_on_keyguard_summary">Nigdy nie pokazuj trwałych powiadomień z tej aplikacji na ekranie blokady</string>
 </resources>

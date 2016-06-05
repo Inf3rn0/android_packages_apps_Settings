@@ -19,6 +19,8 @@
   <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
   <plurals name="show_dev_countdown_cm">
     <item quantity="one">רק עוד צעד <xliff:g id="step_count">%1$d</xliff:g> מהפעלת אפשרויות מפתח.</item>
+    <item quantity="two">רק עוד <xliff:g id="step_count">%1$d</xliff:g> צעדים מהפעלת אפשרויות מפתח.</item>
+    <item quantity="many">רק עוד <xliff:g id="step_count">%1$d</xliff:g> צעדים מהפעלת אפשרויות מפתח.</item>
     <item quantity="other">רק עוד <xliff:g id="step_count">%1$d</xliff:g> צעדים מהפעלת אפשרויות מפתח.</item>
   </plurals>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
@@ -173,6 +175,18 @@
   <string name="wifi_setting_countrycode_summary">ציין קוד אזור עבור Wi\u2011Fi</string>
   <!-- Wi-Fi settings screen, error message when the frequency band could not be set [CHAR LIMIT=50]. -->
   <string name="wifi_setting_countrycode_error">אירעה שגיאה בהגדרת הקוד האזורי.</string>
+  <string name="wifi_countrycode_us">ארצות הברית</string>
+  <string name="wifi_countrycode_ca">קנדה, טאיוואן</string>
+  <string name="wifi_countrycode_de">גרמניה</string>
+  <string name="wifi_countrycode_gb">אירופה</string>
+  <string name="wifi_countrycode_jp">יפן, רוסיה</string>
+  <string name="wifi_countrycode_au">אוסטרליה</string>
+  <string name="wifi_countrycode_cn">סין</string>
+  <string name="wifi_countrycode_kr">קוריאה</string>
+  <string name="wifi_countrycode_tr">דרום אפריקה, טורקיה</string>
+  <string name="wifi_countrycode_sg">ישראל, סינגפור</string>
+  <string name="wifi_countrycode_br">ברזיל</string>
+  <string name="wifi_countrycode_in">הודו</string>
   <!-- Profiles -->
   <string name="profile_menu_delete_title">מחק</string>
   <string name="profile_action_none">השאר ללא שינוי</string>
@@ -574,6 +588,9 @@
   <string name="saturation_str">רוויה: <xliff:g id="saturation_value">%1$s</xliff:g></string>
   <string name="contrast_str">ניגודיות: <xliff:g id="contrast_value">%1$s</xliff:g></string>
   <string name="intensity_str">עוצמה: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
+  <string name="screen_color_standard">רגיל</string>
+  <string name="screen_color_vivid">חי (Vivid)</string>
+  <string name="screen_color_custom">מותאם אישית</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">התאם את מסך מכשירך בהתאם לשעה ולתנאי הסביבה על מנת לשפר את נוחות הקריאה ולהפחית את עייפות העין</string>
   <string name="live_display_mode">מצב תצוגה</string>
@@ -1025,4 +1042,10 @@
   <string name="restrict_cellular_access_dialog_summary">תכונה זו עלולה לגרום להפסקת פעולתו של יישום התלוי בגישה לרשת כאשר קיימת זמינות לרשתות סלולריות בלבד.\n\nתוכל למצוא פקדים מתאימים יותר לשימוש בנתונים, בהגדרות הזמינות בתוך היישום.</string>
   <!-- Label for settings shortcut: carrier selection -->
   <string name="shortcut_carrier_title">ספקי סלולר</string>
+  <!-- title for lock screen blur preference -->
+  <!-- Per app controls for LP keyguard notifications -->
+  <string name="app_notification_show_on_keyguard_title">הצג על מסך הנעילה</string>
+  <string name="app_notification_show_on_keyguard_summary">הצג הודעות מיישום זה במסך הנעילה</string>
+  <string name="app_notification_no_ongoing_on_keyguard_title">השבתת התראות תמידיות על מסך הנעילה</string>
+  <string name="app_notification_no_ongoing_on_keyguard_summary">אל תציג התראות תמידיות מיישום זה על מסך הנעילה</string>
 </resources>

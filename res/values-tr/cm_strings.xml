@@ -173,6 +173,18 @@
   <string name="wifi_setting_countrycode_summary">Wi\u2011Fi için bölge kodunu girin</string>
   <!-- Wi-Fi settings screen, error message when the frequency band could not be set [CHAR LIMIT=50]. -->
   <string name="wifi_setting_countrycode_error">Bölge kodunu ayarlarken sorun oluştu.</string>
+  <string name="wifi_countrycode_us">Birleşik Devletler</string>
+  <string name="wifi_countrycode_ca">Kanada, Tayvan</string>
+  <string name="wifi_countrycode_de">Almanya</string>
+  <string name="wifi_countrycode_gb">Avrupa</string>
+  <string name="wifi_countrycode_jp">Japonya, Rusya</string>
+  <string name="wifi_countrycode_au">Avustralya</string>
+  <string name="wifi_countrycode_cn">Çin</string>
+  <string name="wifi_countrycode_kr">Kore</string>
+  <string name="wifi_countrycode_tr">Güney Afrika, Türkiye</string>
+  <string name="wifi_countrycode_sg">İsrail, Singapur</string>
+  <string name="wifi_countrycode_br">Brezilya</string>
+  <string name="wifi_countrycode_in">Hindistan</string>
   <!-- Profiles -->
   <string name="profile_menu_delete_title">Sil</string>
   <string name="profile_action_none">Değiştirme</string>
@@ -574,6 +586,9 @@
   <string name="saturation_str">Doygunluk: <xliff:g id="saturation_value">%1$s</xliff:g></string>
   <string name="contrast_str">Zıtlık: <xliff:g id="contrast_value">%1$s</xliff:g></string>
   <string name="intensity_str">Yoğunluk: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
+  <string name="screen_color_standard">Standart</string>
+  <string name="screen_color_vivid">Canlı</string>
+  <string name="screen_color_custom">Özel</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">Okunabilirliği artırmak ve göz yorgunluğu azaltmak için gün ve ortam koşulları zamanına bağlı olarak ekranı iyileştirir</string>
   <string name="live_display_mode">Görüntü modu</string>
@@ -1025,4 +1040,10 @@
   <string name="restrict_cellular_access_dialog_summary">Bu özellik sadece hücresel ağ kullanılabilirken ağ erişimine bağlı çalışan bir uygulamanın çalışmayı durdurmasına sebep olabilir.\n\nDaha uygun veri kullanım seçeneklerini uygulama içindeki ayarlardan bulabilirsiniz.</string>
   <!-- Label for settings shortcut: carrier selection -->
   <string name="shortcut_carrier_title">Ağ operatörleri</string>
+  <!-- title for lock screen blur preference -->
+  <!-- Per app controls for LP keyguard notifications -->
+  <string name="app_notification_show_on_keyguard_title">Kilit ekranında göster</string>
+  <string name="app_notification_show_on_keyguard_summary">Kilit ekranında bu uygulamanın bildirimlerini göster</string>
+  <string name="app_notification_no_ongoing_on_keyguard_title">Kilit ekranında kalıcı bildirimleri devre dışı bırak</string>
+  <string name="app_notification_no_ongoing_on_keyguard_summary">Kilit ekranında bu uygulamanın kalıcı bildirimlerini asla gösterme</string>
 </resources>
