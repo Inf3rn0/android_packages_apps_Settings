@@ -79,6 +79,12 @@
                 android:summary="@string/double_tap_to_sleep_summary"
                 android:defaultValue="true" />
 
+        <!-- Smart cover -->
+        <PreferenceScreen
+                android:key="smart_cover"
+                android:title="@string/smart_cover_title"
+                android:fragment="com.android.settings.temasek.SmartCoverSettings" />
+
         <SwitchPreference
                 android:key="camera_gesture"
                 android:title="@string/camera_gesture_title"
